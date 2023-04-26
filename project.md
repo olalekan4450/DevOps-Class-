@@ -25,7 +25,7 @@
 ![2](https://user-images.githubusercontent.com/106252004/233030993-e8902f9d-d82a-4235-811c-3448bf617d96.jpg)
 
 -I'll be utilizing the SSH protocol to establish a connection between my local terminal and the EC2 server
-`ssh -i <private-key-name>. pem ubuntu@<Public-IP-address>
+`ssh -i <private-key-name>. pem ubuntu@<Public-IP-address>`
 
 ![3](https://user-images.githubusercontent.com/106252004/233032213-6684b8bf-e718-4edf-82cf-df4541f88d96.jpg)
   
@@ -42,24 +42,24 @@
   
 - Update the list of software packages in the package manager:
 
-`sudo apt update
+`sudo apt update`
 
 - Run apache2 package installation:
 
-`sudo apt install apache2
+`sudo apt install apache2`
 
 To confirm if apache2 is running as a service in our operating system, execute the following command.:
 
-`sudo systemctl status apache2
+`sudo systemctl status apache2`
 
 If the status of apache2 is displayed as "green" and it is running, then we have successfully completed all the necessary steps. Congratulations! We have successfully launched our first web server in the cloud!
 
 ![Creating a virtual host 4g](https://user-images.githubusercontent.com/106252004/233035495-7aa05552-9b5c-40f3-8452-04658346d6ff.jpg)
 Now, let's verify if our server is running and accessible both locally and from the internet. To check the local access in Ubuntu shell, we can run the following command:
-`curl http://localhost:80
+`curl http://localhost:80`
 
 <img width="709" alt="image" src="https://user-images.githubusercontent.com/106252004/233037085-1f4e6340-15ae-41e9-acd3-2576475553b2.png">
-It's now time to test the responsiveness of our Apache HTTP server to requests from the internet. We need to open a web browser and attempt to access the following URL: `http://<Public-IP-Address>:80
+It's now time to test the responsiveness of our Apache HTTP server to requests from the internet. We need to open a web browser and attempt to access the following URL: `http://<Public-IP-Address>:80`
 
 ![installing apache2 1f ](https://user-images.githubusercontent.com/106252004/233038311-adbc1437-4e89-4130-86a8-3a8d13811fcc.jpg)
 looks like this:
