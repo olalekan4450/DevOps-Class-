@@ -119,10 +119,11 @@ php-mysql: This is a PHP module that allows PHP to communicate with MySQL-based 
 sudo apt install php libapache2-mod-php php-mysql
   ![installing PHP 3a](https://user-images.githubusercontent.com/106252004/234598804-ce1b0be4-95cc-4d18-baa4-6e4c18c72f97.jpg)
 ![installing PHP 3b](https://user-images.githubusercontent.com/106252004/234599868-869d1256-194d-4843-b398-8668c092c44f.jpg)
-- After the installation is completed, we can use the following command to verify our PHP version:
   
+- After the installation is completed, we can use the following command to verify our PHP version:
 `php -v`
  ![installing PHP 3c](https://user-images.githubusercontent.com/106252004/234600058-db78b604-0077-4f8c-b01a-bcf251cb3c1b.jpg)
+
   
   At this point, our LAMP stack is completely installed and fully operational.
 
