@@ -1,34 +1,45 @@
 # WEB STACK IMPLEMENTATION FOR LAMP STACK
 
 ## LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
--### Setting up our AWS instance
+
+### Setting up our AWS instance
+
 -We require an AWS account
 -Initiate the creation of a new EC2 instance from the t2.micro family, running Ubuntu Server 20.04 LTS
 -Ensure that the private key (.PEM file) is saved securely before starting the instance
+
 ![0](https://user-images.githubusercontent.com/106252004/233028963-b5661a2e-8cf8-4927-abff-0f11b3b0c52e.jpg)
+
 -Connecting to EC2 terminal
 
   - Using the terminal on MAC/Linux
   - Using Windows Terminal
   - We'll be connecting to the EC2 instance using Gitbash terminal installed in my windows system
 -We will need the PEM key file that we have saved. Navigate to the download folder in the terminal
+
 ![1](https://user-images.githubusercontent.com/106252004/233030455-2735a9bc-6749-42d0-80bc-67d9738abcfa.jpg)
+
 - We need to run this command to ensure our key is not publicly viewable.
 `chmod 400 <your-PEM-file-name>.pem
 
 ![2](https://user-images.githubusercontent.com/106252004/233030993-e8902f9d-d82a-4235-811c-3448bf617d96.jpg)
+
 -I'll be utilizing the SSH protocol to establish a connection between my local terminal and the EC2 server
 `ssh -i <private-key-name>. pem ubuntu@<Public-IP-address>
 
 ![3](https://user-images.githubusercontent.com/106252004/233032213-6684b8bf-e718-4edf-82cf-df4541f88d96.jpg)
+  
 -Type yes to connect
 -Now we are connected to our instance well done.
 
 ![4](https://user-images.githubusercontent.com/106252004/233032712-bb51dd8c-eb78-4969-935a-cfa88e4645a3.jpg)
+  
 - We have successfully created our first Linux server in the cloud, and our current setup looks like this: (we are the client)
 ![5](https://user-images.githubusercontent.com/106252004/233033157-6fabe537-fa61-4ef2-b003-9d8dc89247fa.jpg)
-## STEP 1
+
+  ## STEP 1
 ### Installing Apache and updating the firewall
+  
 - Update the list of software packages in the package manager:
 
 `sudo apt update
