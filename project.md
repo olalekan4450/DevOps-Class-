@@ -134,7 +134,78 @@ sudo apt install php libapache2-mod-php php-mysql
 - MySQL
 
 - PHP
- 
+  
+  # STEP 4 CREATING A VIRTUAL HOST FOR YOUR WEBSITE USING APACHE
+- Create the directory for projectlamp using ‘mkdir’ command as follows:
+`sudo mkdir /var/www/projectlamp`
+  ![Creating a virtual host 4a](https://user-images.githubusercontent.com/106252004/234608562-09e5323e-3c2c-4713-b9c4-656ac72d018c.jpg)
+
+- Next, assign ownership of the directory with our current system user:
+  
+`sudo chown -R $USER:$USER /var/www/projectlamp`
+  ![Creating a virtual host 4b ](https://user-images.githubusercontent.com/106252004/234608833-c035143c-f769-4d07-9965-f694b609b3a0.jpg)
+
+
+- Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor.
+`sudo nano /etc/apache2/sites-available/projectlamp.conf`
+  
+
+This will create a new blank file. Paste in the following configuration text:
+
+<VirtualHost *:80>
+
+ServerName projectlamp
+
+ServerAlias www.projectlamp
+
+ServerAdmin webmaster@localhost
+
+DocumentRoot /var/www/projectlamp
+
+ErrorLog ${APACHE_LOG_DIR}/error.log
+
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+- right click and paste
+
+ ![creating a virtual host 4c](https://user-images.githubusercontent.com/106252004/234609368-64ee9ef8-3e8e-40f9-be63-fa8483ac592f.jpg)
+  
+  - press ctrl + x to exit
+  ![230796546-156020fb-5b46-4660-a969-4aaa0be9e482](https://user-images.githubusercontent.com/106252004/234615514-62374afd-6387-4eb8-9598-6a8333620240.png)
+  
+  - Type Yes and Enter
+  - Please press the 'ENTER' key to execute the command.
+  ![230796582-4ada17de-f669-4a89-a412-0efd0c5c83ba](https://user-images.githubusercontent.com/106252004/234616311-ed599a42-98c2-447e-8d2c-1fb0910a477a.png)
+  
+  We can utilize the 'ls' command to display the new file in the 'sites-available' directory.
+
+`sudo ls /etc/apache2/sites-available`
+
+You will see something like this;
+
+ ![creating a virtual host 4d](https://user-images.githubusercontent.com/106252004/234617371-d17b3f2c-ffc3-446e-b8d3-87e67b65b446.jpg)
+  
+  We can now enable the new virtual host using the 'a2ensite' command.
+
+`sudo a2ensite projectlamp`
+
+If we are not using a custom domain name and want to disable Apache's default website to prevent it from overriding our virtual host configuration, we can use the 
+  
+a2dissite' command. Enter the following command:
+
+`sudo a2dissite 000-default`
+
+To ensure that our configuration file does not contain any syntax errors, we can run the following command:
+
+`sudo apache2ctl configtest`
+  
+![creating a virtual host 4e](https://user-images.githubusercontent.com/106252004/234618469-a6a25070-f399-45f7-a64d-5ee5c4c1c058.jpg)
+
+
+  
+  
+  
 
   
   
