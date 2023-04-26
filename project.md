@@ -109,6 +109,36 @@ Answer Y for yes, or anything else to continue without enabling.
 
 Your MySQL server is now installed and secured. Next, we will install PHP, the final component in the LAMP stack.
   
+  ## STEP 3 INSTALLING PHP
+  
+We have Apache installed to serve our content, MySQL installed to store and manage our data, and PHP as the component that will process code to display dynamic content to the end user. To complete the setup, we will need to install the following packages:
+
+php-mysql: This is a PHP module that allows PHP to communicate with MySQL-based databases. libapache2-mod-php: This package enables Apache to handle PHP files. When we install the php package, the necessary core PHP packages will be automatically installed as dependencies.
+
+- To install all three packages - php, php-mysql, and libapache2-mod-php - simultaneously, we can run the following command:
+sudo apt install php libapache2-mod-php php-mysql
+  ![installing PHP 3a](https://user-images.githubusercontent.com/106252004/234598804-ce1b0be4-95cc-4d18-baa4-6e4c18c72f97.jpg)
+![installing PHP 3b](https://user-images.githubusercontent.com/106252004/234599868-869d1256-194d-4843-b398-8668c092c44f.jpg)
+- After the installation is completed, we can use the following command to verify our PHP version:
+  
+`php -v`
+ ![installing PHP 3c](https://user-images.githubusercontent.com/106252004/234600058-db78b604-0077-4f8c-b01a-bcf251cb3c1b.jpg)
+  
+  At this point, our LAMP stack is completely installed and fully operational.
+
+- Linux (Ubuntu)
+
+- Apache HTTP Server
+
+- MySQL
+
+- PHP
+ 
+
+  
+  
+
+  
 
   
 
