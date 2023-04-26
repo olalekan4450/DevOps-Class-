@@ -60,7 +60,7 @@ Now, let's verify if our server is running and accessible both locally and from 
 
 <img width="709" alt="image" src="https://user-images.githubusercontent.com/106252004/233037085-1f4e6340-15ae-41e9-acd3-2576475553b2.png">
 It's now time to test the responsiveness of our Apache HTTP server to requests from the internet. We need to open a web browser and attempt to access the following 
- URL: `http://<Public-IP-Address>:80`
+ URL:http://<Public-IP-Address>:80
 
 ![installing apache2 1f ](https://user-images.githubusercontent.com/106252004/233038311-adbc1437-4e89-4130-86a8-3a8d13811fcc.jpg)
 looks like this:
