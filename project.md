@@ -213,7 +213,7 @@ sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/met
 
 - Now let's go to our browser and try to open our website URL using IP address:
 
-http://<EC2-Public-IP-Address>:80
+`http://<EC2-Public-IP-Address>:80`
   
   
   
