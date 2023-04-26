@@ -67,6 +67,50 @@ looks like this:
 
 ![installing apache2 1g web page ](https://user-images.githubusercontent.com/106252004/233038923-171661dd-6b8b-451f-83d5-a31d9bee4b00.jpg)
 It works
+  
+  ## STEP 2
+### Installing MYSQL
+  
+- Use ‘apt’ to acquire and install this software
+
+- sudo apt install mysql-server
+
+When prompted, confirm installation by typing Y, and then ENTER.
+
+- When the installation is finished, log in to the MySQL console by typing: sudo mysql
+  
+  ![installing mysql 2a ](https://user-images.githubusercontent.com/106252004/234592921-57a969f2-dbe1-4e32-b9f9-b1ace39f2256.jpg)
+  
+![Installing mysql 2b](https://user-images.githubusercontent.com/106252004/234593543-e46583ce-77ed-4c42-9bf9-3b07a4043a98.jpg)
+  
+  - It is advisable to execute a security script that is pre-installed with MySQL. This script will eliminate insecure default settings and secure access to our database system. Prior to running the script, we will need to set a password for the root user, using 'mysql_native_password' as the default authentication method. The password for this user will be defined as 'PassWord.1'. `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
+  
+  ![installing mysql 2c](https://user-images.githubusercontent.com/106252004/234593874-8e196e53-976b-41c0-96d8-2b04254ace3e.jpg)
+  
+ - Exit the MySQL shell with:
+`mysql> exit`
+  
+  ![installing mysql 2d](https://user-images.githubusercontent.com/106252004/234594505-fd0a63be-fb60-407d-bbac-8c48ef08f4f0.jpg)
+  
+  - Start the interactive script by running sudo mysql_secure_installation
+
+Answer Y for yes, or anything else to continue without enabling.
+![installing mysql 2e](https://user-images.githubusercontent.com/106252004/234595125-eafe6104-f70b-47f2-af16-5d9e1a1e948e.jpg)
+  
+ Press y|Y for Yes, any other key for No:
+![installing mysql 2f](https://user-images.githubusercontent.com/106252004/234595710-a5e4417a-5044-413e-aa94-f773b27033c9.jpg)
+
+- If we choose to answer "yes" to the script, we will be prompted to select a level of password validation. It's important to note that if we input '2' for the strongest level, we may encounter errors while setting passwords that do not meet the criteria of including numbers, uppercase and lowercase letters, special characters, or are based on common dictionary words. For example, "PassWord.1" would meet the criteria for this level of password validation
+  
+![installing mysql 2g mysql console login page ](https://user-images.githubusercontent.com/106252004/234596737-458b906b-5138-4f61-8434-0793b6252ba7.jpg)
+  
+ - Exit the MySQL shell with:
+`mysql> exit`
+
+Your MySQL server is now installed and secured. Next, we will install PHP, the final component in the LAMP stack.
+  
+
+  
 
 
 
