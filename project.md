@@ -20,7 +20,7 @@
 ![1](https://user-images.githubusercontent.com/106252004/233030455-2735a9bc-6749-42d0-80bc-67d9738abcfa.jpg)
 
 - We need to run this command to ensure our key is not publicly viewable.
-`chmod 400 <your-PEM-file-name>.pem
+`chmod 400 <your-PEM-file-name>.pem`
 
 ![2](https://user-images.githubusercontent.com/106252004/233030993-e8902f9d-d82a-4235-811c-3448bf617d96.jpg)
 
