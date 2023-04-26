@@ -116,7 +116,8 @@ We have Apache installed to serve our content, MySQL installed to store and mana
 php-mysql: This is a PHP module that allows PHP to communicate with MySQL-based databases. libapache2-mod-php: This package enables Apache to handle PHP files. When we install the php package, the necessary core PHP packages will be automatically installed as dependencies.
 
 - To install all three packages - php, php-mysql, and libapache2-mod-php - simultaneously, we can run the following command:
-sudo apt install php libapache2-mod-php php-mysql
+  
+     `sudo apt install php libapache2-mod-php php-mysql`
   ![installing PHP 3a](https://user-images.githubusercontent.com/106252004/234598804-ce1b0be4-95cc-4d18-baa4-6e4c18c72f97.jpg)
 ![installing PHP 3b](https://user-images.githubusercontent.com/106252004/234599868-869d1256-194d-4843-b398-8668c092c44f.jpg)
   
