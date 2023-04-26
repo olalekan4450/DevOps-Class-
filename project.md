@@ -203,7 +203,18 @@ To ensure that our configuration file does not contain any syntax errors, we can
   
 ![creating a virtual host 4e](https://user-images.githubusercontent.com/106252004/234618469-a6a25070-f399-45f7-a64d-5ee5c4c1c058.jpg)
 
+  Finally, reload Apache so these changes take effect:
+ `sudo systemctl reload apache2`
+  
+![Creating a virtual host 4g](https://user-images.githubusercontent.com/106252004/234623972-d125d276-999d-4219-b430-4944ebfbc862.jpg)
+  
+- Our new website is now active, but the web root /var/www/projectlamp is still empty. Lets create an index.html file in that location so that we can test that the virtual host works as expected:
+sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
 
+- Now let's go to our browser and try to open our website URL using IP address:
+
+http://<EC2-Public-IP-Address>:80
+  
   
   
   
