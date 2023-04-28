@@ -239,6 +239,7 @@ sudo nano /etc/apache2/mods-enabled/dir.conf
 DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 
 </IfModule>
+  
 - press ctrl + x to exit
 - Type Yes and Enter
 ![Enable PHP on the website 5a](https://user-images.githubusercontent.com/106252004/235134090-82056bfb-e1c8-46c5-83f5-f35dd5307103.jpg)
@@ -256,7 +257,6 @@ DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 <?php
 
 phpinfo();
-
 ![enable PHP on the website 5b ](https://user-images.githubusercontent.com/106252004/235134544-cfe43a86-14c2-4b65-b235-815caad2b4b6.jpg)
 
 - save and close the file, refresh the page and you will see a page similar to this:
@@ -267,7 +267,7 @@ This webpage provides PHP-related server information, useful for debugging and v
 
 After reviewing the PHP server information, it is recommended that we delete the created file as it may contain sensitive data about our PHP environment and Ubuntu server. We can use the "rm" command to remove the file.
 
-sudo rm /var/www/projectlamp/index.php
+`sudo rm /var/www/projectlamp/index.php`
 
 We can always recreate this page whenever need to access the information again later.
 
