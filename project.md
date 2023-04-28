@@ -142,6 +142,7 @@ php-mysql: This is a PHP module that allows PHP to communicate with MySQL-based 
 
 - Next, assign ownership of the directory with our current system user: 
 `sudo chown -R $USER:$USER /var/www/projectlamp`
+  
   ![Creating a virtual host 4b ](https://user-images.githubusercontent.com/106252004/234608833-c035143c-f769-4d07-9965-f694b609b3a0.jpg)
   
 - Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor.
@@ -257,6 +258,7 @@ DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 <?php
 
 phpinfo();
+
 ![enable PHP on the website 5b ](https://user-images.githubusercontent.com/106252004/235134544-cfe43a86-14c2-4b65-b235-815caad2b4b6.jpg)
 
 - save and close the file, refresh the page and you will see a page similar to this:
