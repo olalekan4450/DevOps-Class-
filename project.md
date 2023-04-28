@@ -262,4 +262,8 @@ phpinfo();
 
 ![enable PHP on the website 5b ](https://user-images.githubusercontent.com/106252004/235140217-b2ba1212-6778-4529-b507-488a7da01b49.jpg)
 
+save and close the file, refresh the page and you will see a page similar to this
+
+![Enable PHP on the website 5c PHP web page ](https://user-images.githubusercontent.com/106252004/235141327-72a5e91c-f123-4305-9c5a-3888a35535df.jpg)
+
   
