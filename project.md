@@ -124,7 +124,6 @@ php-mysql: This is a PHP module that allows PHP to communicate with MySQL-based 
 - After the installation is completed, we can use the following command to verify our PHP version:
 `php -v`
  ![installing PHP 3c](https://user-images.githubusercontent.com/106252004/234600058-db78b604-0077-4f8c-b01a-bcf251cb3c1b.jpg)
-
   
   At this point, our LAMP stack is completely installed and fully operational.
 
@@ -141,12 +140,10 @@ php-mysql: This is a PHP module that allows PHP to communicate with MySQL-based 
 `sudo mkdir /var/www/projectlamp`
   ![Creating a virtual host 4a](https://user-images.githubusercontent.com/106252004/234608562-09e5323e-3c2c-4713-b9c4-656ac72d018c.jpg)
 
-- Next, assign ownership of the directory with our current system user:
-  
+- Next, assign ownership of the directory with our current system user: 
 `sudo chown -R $USER:$USER /var/www/projectlamp`
   ![Creating a virtual host 4b ](https://user-images.githubusercontent.com/106252004/234608833-c035143c-f769-4d07-9965-f694b609b3a0.jpg)
-
-
+  
 - Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor.
 `sudo nano /etc/apache2/sites-available/projectlamp.conf`
   
