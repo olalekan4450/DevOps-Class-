@@ -256,7 +256,6 @@ DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 
 - This will open a blank file. Add the following text, which is valid PHP code, inside the file:
 <?php
-
 phpinfo();
 
 ![enable PHP on the website 5b ](https://user-images.githubusercontent.com/106252004/235134544-cfe43a86-14c2-4b65-b235-815caad2b4b6.jpg)
