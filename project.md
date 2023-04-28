@@ -215,8 +215,66 @@ sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/met
 
 `http://<EC2-Public-IP-Address>:80`
   
+  ![creating a virtual host 4h website url ](https://user-images.githubusercontent.com/106252004/235129737-e1fbdf8b-5472-497d-b4c1-e3854d8f9c52.jpg)
   
+  - We can also access our website in our browser by public DNS name, not only by IP. Let us try it out, the result must be the same (port is optional)
+
+`http://<Public-DNS-Name>:80`
   
+ ![creating a virtual host 4i DNS ](https://user-images.githubusercontent.com/106252004/235132932-9648b5ad-7bdb-47bb-88c3-d6ce49b0b803.jpg)
+  
+ - Let's keep the 'index.html' file as a temporary landing page for our application until we set up an 'index.php' file to replace it. Once we configure the 'index.php' file, we will remove or rename the 'index.html' file from our document root, as it would take precedence over an 'index.php' file by default.
+  
+ ## STEP 5 ENABLE PHP ON THE WEBSITE
+  
+### In case we want to change the default behavior of Apache where 'index.html' takes precedence over 'index.php' file, we can edit the '/etc/apache2/mods-enabled/dir.conf' file and modify the order of listing within the 'DirectoryIndex' directive to prioritize 'index.php' file.
+sudo nano /etc/apache2/mods-enabled/dir.conf
+
+- clear everythng and paste this in:
+<IfModule mod_dir.c>
+
+#Change this:
+
+#DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+
+#To this:
+
+DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+
+</IfModule>
+- press ctrl + x to exit
+- Type Yes and Enter
+![Enable PHP on the website 5a](https://user-images.githubusercontent.com/106252004/235134090-82056bfb-e1c8-46c5-83f5-f35dd5307103.jpg)
+  
+- press Enter
+
+- After saving and closing the file, you will need to reload Apache so the changes take effect:
+
+`sudo systemctl reload apache2`
+
+- Create a new file named index.php inside your custom web root folder:
+`nano /var/www/projectlamp/index.php`
+
+- This will open a blank file. Add the following text, which is valid PHP code, inside the file:
+<?php
+
+phpinfo();
+
+![enable PHP on the website 5b ](https://user-images.githubusercontent.com/106252004/235134544-cfe43a86-14c2-4b65-b235-815caad2b4b6.jpg)
+
+- save and close the file, refresh the page and you will see a page similar to this:
+
+![Enable PHP on the website 5c PHP web page ](https://user-images.githubusercontent.com/106252004/235134875-f6562461-0afb-4968-a12c-e8c8ccd550e6.jpg)
+
+This webpage provides PHP-related server information, useful for debugging and verifying correct settings implementation. This page shows that our PHP installation is working.
+
+After reviewing the PHP server information, it is recommended that we delete the created file as it may contain sensitive data about our PHP environment and Ubuntu server. We can use the "rm" command to remove the file.
+
+sudo rm /var/www/projectlamp/index.php
+
+We can always recreate this page whenever need to access the information again later.
+
+## We can now terminate our instance and any other resources to avoid additional charges
   
 
   
