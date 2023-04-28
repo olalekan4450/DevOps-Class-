@@ -266,4 +266,13 @@ save and close the file, refresh the page and you will see a page similar to thi
 
 ![Enable PHP on the website 5c PHP web page ](https://user-images.githubusercontent.com/106252004/235141327-72a5e91c-f123-4305-9c5a-3888a35535df.jpg)
 
+This webpage provides PHP-related server information, useful for debugging and verifying correct settings implementation. This page shows that our PHP installation is working.
+
+After reviewing the PHP server information, it is recommended that we delete the created file as it may contain sensitive data about our PHP environment and Ubuntu server. We can use the "rm" command to remove the file.
+
+sudo rm /var/www/projectlamp/index.php
+
+We can always recreate this page whenever need to access the information again later.
+
+## We can now terminate our instance and any other resources to avoid additional charges
   
