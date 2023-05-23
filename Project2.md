@@ -31,5 +31,7 @@ Run this command to ensure your key is not publicly viewable
 I will utilize the ssh protocol to establish a connection between my local terminal and my EC2 server
 
   ssh -i "devOpsproject.pem" ubuntu@44.202.245.165
+  ![img 4 connecting to instance  IP ](https://github.com/olalekan4450/DevOps-Class-/assets/106252004/07e61675-09a5-4c49-b29d-9b15a4c4deda)
+  
   
   
