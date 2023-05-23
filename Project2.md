@@ -62,6 +62,7 @@ Let's test if our Nginx server can respond to requests from the Internet
 Open a web browser of your choice and try to access following url http://<EcintancePublic-IP-Address>:80  
 <img width="865" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/02a6f58c-1f5a-4a52-96cb-9de021eb774f">
 <img width="914" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/861786b6-c49f-43fa-a527-0cf5bc03ae3a">
+- If you see the above page, then your web server is now correctly installed and accessible through your firewall.
   
   
   
