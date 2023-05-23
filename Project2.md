@@ -57,6 +57,11 @@ As we know, we have TCP port 22 open by default on our EC2 machine to access it 
 
 Run: `curl http://localhost:80`
 ![img 4 nginx welcome page](https://github.com/olalekan4450/DevOps-Class-/assets/106252004/a5455054-dd42-41b0-826b-797840654ee1)
+
+Let's test if our Nginx server can respond to requests from the Internet
+Open a web browser of your choice and try to access following url http://<EcintancePublic-IP-Address>:80  
+<img width="865" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/02a6f58c-1f5a-4a52-96cb-9de021eb774f">
+<img width="914" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/861786b6-c49f-43fa-a527-0cf5bc03ae3a">
   
   
   
