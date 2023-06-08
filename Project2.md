@@ -160,6 +160,39 @@ You shall see following message:
 `sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html`
 
 Now go to your browser and try to open your website URL using IP address: `http://<EcintancePublic-IP-Address>:80`
- 
+  <img width="694" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/11228f40-eae0-4352-9ea4-edd65afb6434">
   
+  - Your LEMP stack is now fully configured. In the next step, we’ll create a PHP script to test that Nginx is in fact able to handle .php files within your newly configured website.
   
+## STEP 5 TESTING PHP WITH NGINX
+Open a new file called info.php within your document root in your text editor: `sudo nano /var/www/projectLEMP/info.php`
+
+Type or paste the following lines into the new file. This is valid PHP code that will return information about your server:
+
+<?php
+phpinfo();
+<img width="454" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/4b28012e-ec07-4626-9f01-ed7cf44a554d">
+
+You can now access this page in your web browser by visiting the domain name or public IP address you’ve set up in your Nginx configuration file, followed by /info.php:
+
+`http://server_domain_or_IP/info.php`
+<img width="708" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/1e327ef8-edda-46ef-a682-3818fbaa00a9">
+
+<img width="805" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/ef87c2ef-b7b3-40e1-9d0f-ad0368986083">
+## STEP 6 Retrieving data from MySQL database with PHP
+In this step we will create a test database (DB) with simple "To do list" and configure access to it, so the Nginx website would be able to query data from the DB and display it.
+
+We will create a database named example_database and a user named example_user, but you can replace these names with different values.
+
+First, connect to the MySQL console using the root account: `sudo mysql`
+![image](https://github.com/olalekan4450/DevOps-Class-/assets/106252004/47f1f28d-6f7c-403c-8e8c-5d6e42fb43c5)
+
+- Lets create a new database, run the following command from your MySQL console:
+`CREATE DATABASE example_database;`
+
+- Now we can create a new user and grant him full privileges on the database we have just created.
+`CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';`
+
+
+
+
