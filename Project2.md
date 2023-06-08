@@ -179,6 +179,7 @@ You can now access this page in your web browser by visiting the domain name or 
 <img width="708" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/1e327ef8-edda-46ef-a682-3818fbaa00a9">
 
 <img width="805" alt="image" src="https://github.com/olalekan4450/DevOps-Class-/assets/106252004/ef87c2ef-b7b3-40e1-9d0f-ad0368986083">
+
 ## STEP 6 Retrieving data from MySQL database with PHP
 In this step we will create a test database (DB) with simple "To do list" and configure access to it, so the Nginx website would be able to query data from the DB and display it.
 
